@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Titillium+Web&display=swap");
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+.logo-image {
+  height: 58px;
+  width: 150px;
+  left: 310px;
+  top: 20px;
+  border-radius: 0px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.bg {
+  background-image: url(./src/back.png);
+  height: 66%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider {
+  height: 18%;
+}
+
+.main-nav {
+  padding: 1em 0;
+}
+
+.navbar-br {
+  font-family: "Titillium Web", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.title {
+  font-family: "Orbitron", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 44px;
+  color: #6DB53B;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-family: "Titillium Web", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+h1 {
+  color: red;
+}
+
+.logo {
+  padding-left: 16px;
+}
+
+.social {
+  padding-top: 1.2em;
+  padding-right: 8px;
+}
+.social a {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.contain {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.nav-desk {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.nav-phone {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.nav-phone .social {
+  padding-top: 0.5em;
+  padding-right: 12px;
+}
+.nav-phone .navbar-logo {
+  position: relative;
+  left: 35px;
+}
+.nav-phone .navbar-logo img {
+  height: 50px;
+  width: 68px;
+}
+
+@media (max-width: 990px) {
+  .nav-desk {
+    display: none;
+  }
+}
+@media (min-width: 990px) {
+  .nav-phone {
+    display: none;
+  }
+}
+.content {
+  padding-top: 6%;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 10%;
+}
+.content img {
+  height: 140px;
+  width: 140px;
+}
+
+footer {
+  height: 15%;
+  bottom: 0;
+  margin: auto 0 0 0;
+  left: 0;
+  width: 100%;
+  flex-basis: 1rem;
+}
+footer p {
+  font-family: "Titillium Web", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1.5em 0;
+  margin: 0;
+}
+
+.button-center {
+  background: linear-gradient(180deg, #FF1414 0%, #8A0000 100%);
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  font-family: "Orbitron", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+.button-center:hover {
+  background: linear-gradient(180deg, #FF2626 0%, #BC0303 100%);
+}
+.button-center:active {
+  background: linear-gradient(180deg, #CF0303 0%, #890000 100%);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.button-center:disabled {
+  background: #1D1D1D;
+}
+
+.navbar-br:active {
+  color: red;
+}
+
+i img:hover {
+  color: red;
+}
+
+.copy {
+  color: white;
+}
+
+/* * Made by Erik Terwan
+ * * 24th of November 2015
+ * * MIT License
+ * *
+ * *
+ * * If you are thinking of using this in
+ * * production code, beware of the browser
+ * * prefixes. */
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: red;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #6DB53B;
+}
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* * Just a quick hamburger */
+/* * Transform all the slices of hamburger
+ * * into a crossmark. */
+/* * But let's hide the middle one. */
+/* * Ohyeah and the last one should go the other direction */
+/* * Make this absolute positioned
+ * * at the top left of the screen */
+#menu {
+  position: absolute;
+  width: 300px;
+  height: 80vh;
+  margin: -100px 0 0 -50px;
+  padding: 125px 50px 50px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 15px 0px 20px rgba(0, 0, 0, 0.05);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+#menu li {
+  color: white;
+  padding: 10px 0;
+  font-size: 22px;
+}
+#menu li:hover {
+  color: red;
+}
+
+/* * And let's slide it in from the left */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+.burger-button {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+@media (max-width: 990px) {
+  .row-3 {
+    flex-direction: column;
+  }
+}
+@media (max-width: 990px) {
+  .row-4 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 990px) {
+  .circle-desk {
+    display: none;
+  }
+}
+@media (min-width: 990px) {
+  .circle-mobile {
+    display: none;
+  }
+}
+.row-4, .row-3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.col-4, .col-3 {
+  display: flex;
+  max-width: 12rem;
+  flex-direction: column;
+}
+.col-4 img, .col-3 img {
+  margin-top: auto;
+}
+
+.col-3 {
+  margin: auto;
+}
+
+.fuck-image {
+  overflow: hidden;
+}
+
+.fuck-covid-logo {
+  padding-top: 5%;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.bg-green {
+  height: 100%;
+  background: #000000 url(src/Ellipse.png) no-repeat center;
+  background-size: cover;
+}
+
+p {
+  color: #fff;
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+}
+
+h2 {
+  color: #6DB53B;
+  font-family: Orbitron;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 44px;
+  text-align: center;
+}
+
+h3 {
+  color: #FF1414;
+  font-family: Orbitron;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 31px;
+  text-align: center;
+}
+
+.road-map-title {
+  font-family: "Orbitron", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 44px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fuck-image-line {
+  overflow-x: hidden;
+}
+
+.content {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.custom-search {
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  width: auto;
+  border-radius: 10px;
+}
+
+.input-mint-mobile {
+  background: #FFFFFF;
+  border-radius: 10px;
+  width: 322px;
+  height: 63px;
+  text-align: center;
+}
+
+.input-mint-mobile::placeholder {
+  text-align: center;
+}
+
+.button-mint-mobile {
+  margin-top: 1.5rem;
+  background: #52C86C;
+  border-radius: 10px;
+  width: 320px;
+  height: 60px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  padding: 1.25rem;
+  border: 0;
+}
+
+.custom-search input::placeholder {
+  color: #6D6D6D;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.custom-mint-input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 8px 28px 8px 28px;
+  line-height: 1;
+  color: #000000;
+  font-weight: 600;
+  font-family: Titillium Web, serif;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 36px;
+}
+.custom-mint-input:focus {
+  border: red 3px solid;
+  transition-duration: 100ms;
+}
+.custom-mint-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.custom-mint-button {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 3px;
+  border: 0;
+  font-weight: 600;
+  font-size: 16px;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+  background: linear-gradient(180deg, #FF1414 0%, #8A0000 100%);
+  outline: none;
+  margin: auto;
+  padding: 0 30px;
+  height: 60px;
+  border-radius: 10px;
+  z-index: 2;
+}
+.custom-mint-button:hover {
+  background: linear-gradient(180deg, #FF2626 0%, #BC0303 100%);
+  transition-property: background-color;
+  transform: translateX(5px);
+}
+.custom-mint-button:active {
+  background: linear-gradient(180deg, #CF0303 0%, #890000 100%);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.custom-mint-button:disabled {
+  display: none;
+}
+
+/*# sourceMappingURL=road-map.css.map */

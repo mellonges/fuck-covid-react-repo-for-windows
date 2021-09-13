@@ -1,43 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road Map</title>
+  <link rel="stylesheet" href="road-map.css">
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="animation.css">
+</head>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<body>
+<div class="page">
+  <div class="bg">
+    <div class="contain">
+      <nav class="nav-desk">
+        <div class="logo">
+          <a href="index.html" class="navbar-logo"><img class="logo-image" src="src/icons/FUCK_COVID_BIG.svg" alt=""></a>
+        </div>
+        <div class="main-nav">
+          <a class="navbar-br" href="#">FAQ</a>
+          <a class="navbar-br" href="https://opensea.io/collection/fuck-covid-x">Opensea</a>
+          <a class="navbar-br" style="color: red" href="#">Roadmap</a>
+          <a class="navbar-br" href="#">Show my tokens</a>
+          <a class="navbar-br" href="#">Leaderboard</a>
+          <a class="navbar-br" href="#">Marketplace</a>
+        </div>
+        <div class="social">
+          <a href="https://twitter.com/fuckcovid_io"><img src="src/icons/Vectortwitter.svg" alt=""></a>
+          <a href="https://discord.gg/7uwx9GUjTv"><img src="src/icons/Vectordiscoard.svg" alt=""></a>
+        </div>
+      </nav>
+      <nav class="nav-phone">
+        <div id="menuToggle">
+          <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+          <input type="checkbox" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+          <!--
+      Some spans to act as a hamburger.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>
+      They are acting like a real hamburger,
+      not that McDonalds stuff.
+      -->
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+          <ul id="menu">
+            <a href="#">
+              <li class="burger-button">FAQ</li>
+            </a>
+            <a href="https://opensea.io/collection/fuck-covid-x">
+              <li class="burger-button">Opensea</li>
+            </a>
+            <a href="#">
+              <li class="burger-button">Roadmap</li>
+            </a>
+            <a href="#">
+              <li class="burger-button">Show my tokens</li>
+            </a>
+            <a href="#">
+              <li class="burger-button">Leaderboard</li>
+            </a>
+            <a href="#">
+              <li class="burger-button">Marketplace</li>
+            </a>
+          </ul>
+        </div>
+        <div class="logo">
+          <a href="index.html" class="navbar-logo"><img src="src/icons/FUCK_COVID_SMALL.svg" alt=""></a>
+        </div>
+        <div class="social">
+          <a href="https://twitter.com/fuckcovid_io"><img src="src/icons/Vectortwitter.svg" alt=""></a>
+          <a href="https://discord.gg/7uwx9GUjTv"><img src="src/icons/Vectordiscoard.svg" alt=""></a>
+        </div>
+      </nav>
+      <div class="content">
+        <div class="slide-in-blurred-top">
+          <div class="vibrate-1">
+            <img class="flicker-4" src="src/mask.svg" alt="">
+          </div>
+        </div>
+        <div>
+          <p class="road-map-title">FUCKCOVID is an exclusive <span class="title"> series of 10,000 masks
+                                that</span> will blow your mind.</p>
+          <p class="description">After 10 years, our collection will remain here on the Internet and serve as a reminder to our ancestors that we still had a sense of humor despite all our hatred, and we met this virus in the most fucking beautiful masks.</p>
+        </div>
+       <div id="react-input"></div>
+      </div>
+    </div>
+    <section class="customer-logos slider">
+      <div class="slide"><img src="src/mini-masks/black-mask.gif"></div>
+      <div class="slide"><img src="src/mini-masks/white-mask.gif"></div>
+      <div class="slide"><img src="src/mini-masks/black-mask.gif"></div>
+      <div class="slide"><img src="src/mini-masks/white-mask.gif"></div>
+      <div class="slide"><img src="src/mini-masks/black-mask.gif"></div>
+      <div class="slide"><img src="src/mini-masks/white-mask.gif"></div>
+      <div class="slide"><img src="src/mini-masks/black-mask.gif"></div>
+      <div class="slide"><img src="src/mini-masks/white-mask.gif"></div>
+      <div class="slide"><img src="src/mini-masks/black-mask.gif"></div>
+      <div class="slide"><img src="src/mini-masks/white-mask.gif"></div>
+    </section>
+    <div class="bg-green">
+      <div class="contain scroll-container">
+        <h2 id="roadmap">Roadmap</h2>
+        <p>Update to roadmap coming!</p>
+        <div class="row-3">
+          <div class="col-3">
+            <h3>2021 Q1: </h3>
+            <p>Concept of FUCKCOVID NFT project 2021</p>
+            <img src="src/icons/down.svg" alt="">
+          </div>
+          <div class="col-3">
+            <div class="circle-desk">
+              <img src="src/icons/up.svg" alt="">
+            </div>
+            <h3>2021 Q2: </h3>
+            <p>Design & development FUCKCOVID</p>
+            <div class="circle-mobile"><img src="src/icons/down.svg" alt=""></div>
+
+          </div>
+          <div class="col-3">
+            <h3>2021 Q3:</h3>
+            <p>
+              FUCKCOVID Initial Sale <br /> FUCKCOVID Leaderboard with prizes and game "King of the Hill"<br /> FUCKCOVID Marketplace <br /> Huge airdrop if we raise 50%, the NFT fund for helping doctors and people who suffered from COVID
+              will be created <br /> Update of the roadmap is coming soon! <br />
+            </p>
+            <img src="src/icons/down.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="fuck-image-line">
+          <img class="fuck-image" src="src/1fuck.png" alt="">
+        </div>
+      </div>
+      <div class="fuck-covid-logo">
+        <img src="src/icons/FUCK_COVID_BIG.svg" alt="">
+      </div>
+
+
+      <div class="contain">
+        <div class="row-4">
+          <div class="col-4">
+            <p>Only 10.000 masks will ever be minted. The cost of each mask is only 0.05 ETH.</p>
+            <img src="src/icons/head.svg" alt="">
+          </div>
+          <div class="col-4">
+            <p>There will be a huge marketplace soon, where you will be able to exchange or sell NFT.</p>
+            <img src="src/icons/dollar.svg" alt="">
+          </div>
+          <div class="col-4">
+            <p>Leaderboard is being developed at the moment. Become a leader and receive special bonuses, other NFT, tokens and many other benefits of being a leader.</p>
+            <img src="src/icons/people.svg" alt="">
+          </div>
+          <div class="col-4">
+            <p>Use masks as digital avatars. A unique design will simply blow your mind!</p>
+            <img src="src/icons/card.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <section class="customer-logos slider">
+        <div class="slide"><img src="src/mini-masks/black-mask-white-black.gif"></div>
+        <div class="slide"><img src="src/mini-masks/white-mask-black-back.gif"></div>
+        <div class="slide"><img src="src/mini-masks/black-mask-white-black.gif"></div>
+        <div class="slide"><img src="src/mini-masks/white-mask-black-back.gif"></div>
+        <div class="slide"><img src="src/mini-masks/black-mask-white-black.gif"></div>
+        <div class="slide"><img src="src/mini-masks/white-mask-black-back.gif"></div>
+        <div class="slide"><img src="src/mini-masks/black-mask-white-black.gif"></div>
+        <div class="slide"><img src="src/mini-masks/white-mask-black-back.gif"></div>
+        <div class="slide"><img src="src/mini-masks/black-mask-white-black.gif"></div>
+        <div class="slide"><img src="src/mini-masks/white-mask-black-back.gif"></div>
+        <div class="slide"><img src="src/mini-masks/black-mask-white-black.gif"></div>
+        <div class="slide"><img src="src/mini-masks/white-mask-black-back.gif"></div>
+
+      </section>
+
+      <footer class="container">
+        <p class="copy">Copyright 2021</p>
+      </footer>
+    </div>
+  </div>
+</div>
+<script src="slick/slick.js"></script>
+</body>

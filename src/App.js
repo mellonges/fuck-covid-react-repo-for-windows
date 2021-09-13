@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+// import Onboard from 'bnc-onboard'
+import Web3 from "web3"
+function Input() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="custom-search">
+        <input
+        className="custom-mint-input draw"
+           placeholder="enter a number between 1 and 15"
+      />
+  <button id="btn-connect" className="custom-mint-button "  type="submit">
+    Mint Token
+  </button>
+</div>
   );
 }
 
-export default App;
+export default Input;

@@ -1,0 +1,243 @@
+@import "style"
+
+
+@media (max-width: 990px)
+  .row-3
+    flex-direction: column
+@media (max-width: 990px)
+  .row-4
+    flex-direction: column
+    align-items: center
+
+@media (max-width: 990px)
+  .circle-desk
+    display: none
+
+@media (min-width: 990px)
+  .circle-mobile
+    display: none
+
+%row
+  display: flex
+  justify-content: space-around
+
+
+
+%col
+  display: flex
+  max-width: 12rem
+  flex-direction: column
+  img
+    margin-top: auto
+
+.row-3
+  @extend %row
+
+
+.col-3
+  @extend %col
+  margin: auto
+
+
+
+.row-4
+  @extend %row
+
+
+.col-4
+  @extend %col
+
+.fuck-image
+  overflow: hidden
+
+.fuck-covid-logo
+  padding-top: 5%
+  max-width: 640px
+  margin: 0 auto
+  text-align: center
+  padding-bottom: 5%
+
+
+
+
+.bg-green
+  height: 100%
+  background: #000000 url(src/Ellipse.png) no-repeat center
+  background-size: cover
+
+p
+  color: #fff
+  font-family: Titillium Web
+  font-style: normal
+  font-weight: normal
+  font-size: 18px
+  line-height: 27px
+  text-align: center
+
+h2
+  color: #6DB53B
+  font-family: Orbitron
+  font-style: normal
+  font-weight: bold
+  font-size: 35px
+  line-height: 44px
+  text-align: center
+
+
+h3
+  color: #FF1414
+  font-family: Orbitron
+  font-style: normal
+  font-weight: bold
+  font-size: 25px
+  line-height: 31px
+  text-align: center
+
+
+
+.road-map-title
+  font-family: 'Orbitron', sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 35px
+  line-height: 44px
+  color: white
+  margin-bottom: 5px
+
+
+//.scroll-container
+//  scroll-behavior: smooth
+
+
+html
+  scroll-behavior: smooth
+
+
+
+.fuck-image-line
+  overflow-x: hidden
+
+.content
+
+  padding-left: 10px
+  padding-right: 10px
+
+
+
+.custom-search
+  margin-right: auto
+  margin-left: auto
+  position: relative
+  //width: 660px
+  width: auto
+  border-radius: 10px
+
+
+.input-mint-mobile
+  background: #FFFFFF
+  border-radius: 10px
+  width: 322px
+  height: 63px
+  text-align: center
+
+
+.input-mint-mobile::placeholder
+  text-align: center
+
+
+
+
+.button-mint-mobile
+  margin-top: 1.5rem
+  background: #52C86C
+  border-radius: 10px
+  width: 320px
+  height: 60px
+  font-weight: 600
+  font-size: 18px
+  line-height: 25px
+  letter-spacing: 0.5px
+  padding: 1.25rem
+  border: 0
+
+
+//.button-mint-mobile:disabled
+//  opacity: 60%
+
+
+.custom-search input::placeholder
+  color: #6D6D6D
+  font-weight: 600
+  font-size: 18px
+
+
+.custom-mint-input
+  width: 100%
+  border: 1px solid #ccc
+  border-radius: 10px
+  padding: 8px 28px 8px 28px
+  line-height: 1
+  color: #000000
+  font-weight: 600
+  font-family: Titillium Web, serif
+  box-sizing: border-box
+  outline: none
+  //max-width: 589px
+  font-size: 36px
+  &:focus
+    border: red 3px solid
+    transition-duration: 100ms
+  //outline: 3px solid red
+
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none
+
+//animation: gradient 1s ease infinite
+//@keyframes gradient
+//    0%
+//      background-position: 0% 50%
+//
+//    50%
+//      background-position: 100% 50%
+//
+//    100%
+//      background-position: 0% 50%
+
+
+
+
+
+
+
+
+.custom-mint-button
+  position: absolute
+  right: 10px
+  //left: 10px
+  top: 0
+  bottom: 3px
+  border: 0
+  font-weight: 600
+  font-size: 16px
+  color: #FFFFFF
+  transition: all 0.3s ease
+  background: linear-gradient(180deg, #FF1414 0%, #8A0000 100%)
+  outline: none
+  margin: auto
+  padding: 0 30px
+  height: 60px
+  border-radius: 10px
+  z-index: 2
+  &:hover
+    background: linear-gradient(180deg, #FF2626 0%, #BC0303 100%)
+    transition-property: background-color
+    transform: translateX(5px)
+  &:active
+    background: linear-gradient(180deg, #CF0303 0%, #890000 100%)
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+    border-radius: 5px
+
+
+.custom-mint-button:disabled
+  display: none
+
